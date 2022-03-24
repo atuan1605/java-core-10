@@ -41,5 +41,13 @@ public class DateTime {
         DateTimeFormatter myFormatter = DateTimeFormatter.ofPattern(format);
         String rs = toDay.format(myFormatter);
         System.out.println(rs);
+
+        // thông tin cá nhân gồm tên, ngày sinh, quê quán
+
+        String name = "Lê Anh Tuấn";
+        LocalDate born = LocalDate.of(1997,9,9);
+        String bornrs = born.format(myFormatter);
+        String address = "Hà Nội";
+        System.out.println("Xin chào, tôi tên là " + name + ", tôi sinh ngày " + bornrs + ", tôi đến từ " + address);
     }
 }
