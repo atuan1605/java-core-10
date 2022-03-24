@@ -19,8 +19,8 @@ public class Main {
         System.out.println(c6);
 
         int i = 1;
-        int x = 2 + i++;
-        int y = 2 + ++i;
+        int x = 2 + (i++);
+        int y = 2 + (++i);
         System.out.println("Kết quả của x là " + x);
         System.out.println("Kết quả của y là " + y);
         System.out.println(x != y ? "Vì vậy i++ khác ++i" : "Vì vậy i++ giống ++i");
