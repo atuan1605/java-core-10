@@ -13,16 +13,11 @@ public class Main {
 
 
         char[] charArray = type.toCharArray();
-        boolean space = true;
+
 
         for (int i = 0; i < charArray.length; i++) {
             if (Character.isLetter(charArray[i])) {
-                if (space) {
-                    charArray[i] = Character.toUpperCase(charArray[i]);
-                    space = false;
-                }
-            } else {
-                space = true;
+                charArray[i] = Character.toUpperCase(charArray[i]);
             }
         }
 
