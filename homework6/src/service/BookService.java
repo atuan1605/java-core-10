@@ -5,7 +5,7 @@ import java.time.LocalDate;
 import java.util.Scanner;
 
 public class BookService {
-    public Book addBook(){
+    public Book input(){
         Scanner sc = new Scanner(System.in);
         Book book = new Book();
 

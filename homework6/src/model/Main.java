@@ -21,7 +21,7 @@ public class Main {
             switch (choose) {
                 case 1:
                     for (int i = 0; i < n; i++) {
-                        arrBooks[i] = bookService.addBook();
+                        arrBooks[i] = bookService.input();
                     }
                     break;
                 case 2:
