@@ -45,7 +45,7 @@ public class StaffService {
 
         System.out.println("Nhập ngày sinh: ");
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-        staff.setBirthday(LocalDate.parse(sc.nextLine(),formatter));
+        staff.setBirthday(LocalDate.parse(sc.nextLine(),f));
 
 
         do {
