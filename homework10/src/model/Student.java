@@ -5,7 +5,7 @@ public class Student {
     private String name;
     private int age;
     private String address;
-    private float point;
+    private double point;
     private String classroom;
 
     public Student() {
@@ -52,11 +52,11 @@ public class Student {
         this.address = address;
     }
 
-    public float getPoint() {
+    public double getPoint() {
         return point;
     }
 
-    public void setPoint(float point) {
+    public void setPoint(double point) {
         this.point = point;
     }
 

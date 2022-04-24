@@ -23,7 +23,7 @@ public class StudentService {
         System.out.println("Type address: ");
         student.setAddress(sc.nextLine());
         System.out.println("Type point: ");
-        student.setPoint(sc.nextFloat());
+        student.setPoint(sc.nextDouble());
         sc.nextLine();
 
         return student;
@@ -50,7 +50,7 @@ public class StudentService {
     }
     public void updatePoint(Student student){
         System.out.println("Repair point: ");
-        student.setPoint(sc.nextFloat());
+        student.setPoint(sc.nextDouble());
         sc.nextLine();
     }
 
