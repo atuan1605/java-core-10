@@ -57,6 +57,7 @@ public class StudentService {
     public void deleteStudent(ArrayList<Student> list, Student student){
         list.remove(student);
     }
+
     public void getStudentByClass(ArrayList<Student> list){
         System.out.println("Type classroom: ");
         String fClass= sc.nextLine();
