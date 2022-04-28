@@ -11,7 +11,7 @@ public class Movie {
     @SerializedName("title")
     private String title;
     @SerializedName("category")
-    private String category;
+    private String[] category;
     @SerializedName("director")
     private String director;
     @SerializedName("length")
@@ -24,7 +24,7 @@ public class Movie {
     public Movie() {
     }
 
-    public Movie(int id, String title, String category, String director, int length, String release, long view) {
+    public Movie(int id, String title, String[] category, String director, int length, String release, long view) {
         this.id = id;
         this.title = title;
         this.category = category;
@@ -50,11 +50,11 @@ public class Movie {
         this.title = title;
     }
 
-    public String getCategory() {
+    public String[] getCategory() {
         return category;
     }
 
-    public void setCategory(String category) {
+    public void setCategory(String[] category) {
         this.category = category;
     }
 
@@ -92,14 +92,8 @@ public class Movie {
 
     @Override
     public String toString() {
-        return "Movie{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", category='" + category + '\'' +
-                ", director='" + director + '\'' +
-                ", length=" + length +
-                ", release=" + release +
-                ", view=" + view +
-                '}';
+        return id + " - " + title + " - " + category + " - " + director + " - " + length + " - " + release + " - " + view;
     }
+
+    
 }

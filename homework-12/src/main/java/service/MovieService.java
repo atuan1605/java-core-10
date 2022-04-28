@@ -66,12 +66,14 @@ public class MovieService {
 
     public void countTitleInCategory(ArrayList<Movie> list){
 
-        Map<String, Integer> map =new HashMap<>();
+        TreeMap<String, Integer> map = new TreeMap<>();
         for (Movie m : list){
-            if(map.containsKey(m.getCategory())){
-                map.put(m.getCategory(), map.get(m.getCategory()) + 1);
-            }else {
-                map.put(m.getCategory(), 1);
+            for (String s : m.getCategory()) {
+                if (map.containsKey(s)) {
+                    map.put(s, map.get(s) + 1);
+                } else {
+                    map.put(s, 1);
+                }
             }
         }
 
