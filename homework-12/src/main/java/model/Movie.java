@@ -4,6 +4,7 @@ package model;
 import com.google.gson.annotations.SerializedName;
 
 import java.time.LocalDate;
+import java.util.Arrays;
 
 public class Movie {
     @SerializedName("id")
@@ -92,8 +93,8 @@ public class Movie {
 
     @Override
     public String toString() {
-        return id + " - " + title + " - " + category + " - " + director + " - " + length + " - " + release + " - " + view;
+        return id + " - " + title + " - " + Arrays.toString(category) + " - " + director + " - " + length + " - " + release + " - " + view;
     }
 
-    
+
 }
