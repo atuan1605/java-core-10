@@ -5,6 +5,7 @@ import com.google.gson.annotations.SerializedName;
 
 import java.time.LocalDate;
 import java.util.Arrays;
+import java.util.Date;
 
 public class Movie {
     @SerializedName("id")
@@ -18,14 +19,14 @@ public class Movie {
     @SerializedName("length")
     private int length;
     @SerializedName("release")
-    private String release;
+    private Date release;
     @SerializedName("view")
     private long view;
 
     public Movie() {
     }
 
-    public Movie(int id, String title, String[] category, String director, int length, String release, long view) {
+    public Movie(int id, String title, String[] category, String director, int length, Date release, long view) {
         this.id = id;
         this.title = title;
         this.category = category;
@@ -75,11 +76,11 @@ public class Movie {
         this.length = length;
     }
 
-    public String getRelease() {
+    public Date getRelease() {
         return release;
     }
 
-    public void setRelease(String release) {
+    public void setRelease(Date release) {
         this.release = release;
     }
 
