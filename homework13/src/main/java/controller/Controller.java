@@ -51,6 +51,9 @@ public class Controller {
                     service.showList(service.getByCompany(list,b));
                     break;
                 case 3:
+                    System.out.println("Category: ");
+                    String type = sc.nextLine().toUpperCase();
+                    ArrayList<Product> listCategory = service.getListByCategory(list, type);
                     boolean flagCase3 = true;
                     while (flagCase3){
                         priceMenu();
@@ -58,19 +61,19 @@ public class Controller {
                         sc.nextLine();
                         switch (choicePrice){
                             case 1:
-                            service.showList(service.priceProduct(list, 2000000, 0));
+                            service.showList(service.priceProduct(listCategory, 2000000,0));
                             break;
                             case 2:
-                                service.showList(service.priceProduct(list,2000000, 4000000 ));
+                                service.showList(service.priceProduct(listCategory,2000000,4000000 ));
                                 break;
                             case 3:
-                                service.showList(service.priceProduct(list,4000000 ,7000000 ));
+                                service.showList(service.priceProduct(listCategory,4000000,7000000 ));
                                 break;
                             case 4:
-                                service.showList(service.priceProduct(list, 7000000, 13000000));
+                                service.showList(service.priceProduct(listCategory, 7000000,13000000));
                                 break;
                             case 5:
-                                service.showList(service.priceProduct(list,13000000,0));
+                                service.showList(service.priceProduct(listCategory,13000000,0));
                                 break;
                             case 0:
                                 flagCase3 = false;
