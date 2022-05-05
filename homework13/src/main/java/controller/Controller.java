@@ -55,6 +55,7 @@ public class Controller {
                     String type = sc.nextLine().toUpperCase();
                     ArrayList<Product> listCategory = service.getListByCategory(list, type);
                     boolean flagCase3 = true;
+
                     while (flagCase3){
                         priceMenu();
                         int choicePrice = sc.nextInt();

@@ -58,13 +58,13 @@ public class ProductService {
         if (y> 0){
             for (Product p : list){
                 if (x < p.getPrice() && y > p.getPrice()){
-                    list.add(p);
+                    arrList.add(p);
                 }
             }
         }else{
             for (Product p : list){
                 if (x < p.getPrice()){
-                    list.add(p);
+                   arrList.add(p);
                 }
             }
         }
