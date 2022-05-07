@@ -23,9 +23,8 @@ public class SerialService {
     }
 
     public void showAllSerial(ArrayList<Serial> listSerial){
-        for (Serial s : listSerial){
-            System.out.println(s);
-        }
+        listSerial.forEach(System.out::println);
+
     }
 
     public ArrayList<Serial> getCompleteMovie(ArrayList<Serial> listSerial){
@@ -37,6 +36,8 @@ public class SerialService {
         });
         return listComplete;
     }
+
+
 
 
 }

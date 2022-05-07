@@ -20,4 +20,6 @@ public class Movie extends Similar{
     public void setTime(int time) {
         this.time = time;
     }
+
+
 }

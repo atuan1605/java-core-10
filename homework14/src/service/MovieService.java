@@ -74,6 +74,16 @@ public class MovieService {
             }
         }
     }
+    public ArrayList<Movie> getMovieByYear(ArrayList<Movie> listMovie){
+        ArrayList<Movie> listYear = new ArrayList<>();
+        listMovie.forEach((n) ->{
+            if (n.getRelease().getYear()==2022){
+                listYear.add(n);
+            }
+        });
+        return listYear;
+    }
+
 
 
 }
