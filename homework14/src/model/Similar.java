@@ -1,7 +1,9 @@
 package model;
 
+import java.text.Normalizer;
 import java.time.LocalDate;
 import java.util.Arrays;
+import java.util.regex.Pattern;
 
 public class Similar {
     private int id;
@@ -15,10 +17,10 @@ public class Similar {
     public Similar() {
     }
 
-    public Similar(int id, String name, String slug, String description, EnumCategory[] category, LocalDate release, int view) {
+    public Similar(int id, String name, String description, EnumCategory[] category, LocalDate release, int view) {
         this.id = id;
         this.name = name;
-        this.slug = slug;
+        this.slug = covertToString(name) ;
         this.description = description;
         this.category = category;
         this.release = release;
@@ -81,16 +83,26 @@ public class Similar {
         this.view = view;
     }
 
+    public static String covertToString(String value) {
+        try {
+            String temp = Normalizer.normalize(value, Normalizer.Form.NFD);
+            Pattern pattern = Pattern.compile("\\p{InCombiningDiacriticalMarks}+");
+            return pattern.matcher(temp).replaceAll("").toLowerCase().replaceAll(" ", "-").replaceAll("đ", "d");
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        return null;
+    }
+
     @Override
     public String toString() {
-        return "Similar{" +
-                "id=" + id +
+        return "id=" + id +
                 ", name='" + name + '\'' +
                 ", slug='" + slug + '\'' +
                 ", description='" + description + '\'' +
                 ", category=" + Arrays.toString(category) +
                 ", release=" + release +
-                ", view=" + view +
-                '}';
+                ", view=" + view +", "
+                ;
     }
 }

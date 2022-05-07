@@ -9,8 +9,8 @@ public class Serial extends Similar{
     public Serial() {
     }
 
-    public Serial(int id, String name, String slug, String description, EnumCategory[] category, LocalDate release, int view, Status status, int episode) {
-        super(id, name, slug, description, category, release, view);
+    public Serial(int id, String name, String description, EnumCategory[] category, LocalDate release, int view, Status status, int episode) {
+        super(id, name, description, category, release, view);
         this.status = status;
         this.episode = episode;
     }
@@ -33,9 +33,8 @@ public class Serial extends Similar{
 
     @Override
     public String toString() {
-        return "Serial{" +
+        return super.toString() +
                 "status=" + status +
-                ", episode=" + episode +
-                '}';
+                ", episode=" + episode ;
     }
 }

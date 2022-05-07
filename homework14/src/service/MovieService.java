@@ -12,14 +12,14 @@ public class MovieService {
     Scanner sc = new Scanner(System.in);
     public ArrayList<Movie> createMovieList(){
         ArrayList<Movie> listMovie = new ArrayList<>();
-        listMovie.add(new Movie(1, "Siêu nhân","sieu-nhan","Directed by Michael A",new EnumCategory[]{EnumCategory.FANTASY,EnumCategory.COMEDY}, LocalDate.of(2022,8,15),1,120));
-        listMovie.add(new Movie(2, "The Boys","the-boys","Directed by Superman",new EnumCategory[]{EnumCategory.ACTION}, LocalDate.of(2015,6,30),2000,120));
-        listMovie.add(new Movie(3, "The Godfather","the-godfather","Directed by Batman",new EnumCategory[]{EnumCategory.COMEDY}, LocalDate.of(1972,1,9),200000,120));
-        listMovie.add(new Movie(4, "The Shawshank Redemption","the-shawshank-redemption","Directed by Flash",new EnumCategory[]{EnumCategory.HORROR,EnumCategory.COMEDY}, LocalDate.of(1994,6,10),600,120));
-        listMovie.add(new Movie(5, "Forrest-Gump","forrest-gump","Directed by Aquaman",new EnumCategory[]{EnumCategory.DRAMA}, LocalDate.of(2022,9,20),500,120));
-        listMovie.add(new Movie(6, "Se7en","se7en","Directed by Michael B",new EnumCategory[]{EnumCategory.ACTION,EnumCategory.DRAMA}, LocalDate.of(1995,6,20),1500,120));
-        listMovie.add(new Movie(7, "The Silence of the Lambs","the-silence-of-the-lambs","Directed by Michael C",new EnumCategory[]{EnumCategory.HORROR}, LocalDate.of(2022,5,25),5000,120));
-        listMovie.add(new Movie(8, "American Psycho","american-psycho","Directed by Michael A",new EnumCategory[]{EnumCategory.FANTASY}, LocalDate.of(1960,3,21),100000,120));
+        listMovie.add(new Movie(1, "Siêu nhân","Directed by Michael A",new EnumCategory[]{EnumCategory.FANTASY,EnumCategory.COMEDY}, LocalDate.of(2022,8,15),1,120));
+        listMovie.add(new Movie(2, "The Boys","Directed by Superman",new EnumCategory[]{EnumCategory.ACTION}, LocalDate.of(2015,6,30),2000,120));
+        listMovie.add(new Movie(3, "The Godfather","Directed by Batman",new EnumCategory[]{EnumCategory.COMEDY}, LocalDate.of(1972,1,9),200000,120));
+        listMovie.add(new Movie(4, "The Shawshank Redemption","Directed by Flash",new EnumCategory[]{EnumCategory.HORROR,EnumCategory.COMEDY}, LocalDate.of(1994,6,10),600,120));
+        listMovie.add(new Movie(5, "Forrest-Gump","Directed by Aquaman",new EnumCategory[]{EnumCategory.DRAMA}, LocalDate.of(2022,9,20),500,120));
+        listMovie.add(new Movie(6, "Se7en","se7en",new EnumCategory[]{EnumCategory.ACTION,EnumCategory.DRAMA}, LocalDate.of(1995,6,20),1500,120));
+        listMovie.add(new Movie(7, "The Silence of the Lambs","Directed by Michael C",new EnumCategory[]{EnumCategory.HORROR}, LocalDate.of(2022,5,25),5000,120));
+        listMovie.add(new Movie(8, "American Psycho","Directed by Michael A",new EnumCategory[]{EnumCategory.FANTASY}, LocalDate.of(1960,3,21),100000,120));
         return listMovie;
     }
 

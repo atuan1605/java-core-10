@@ -8,8 +8,8 @@ public class Movie extends Similar{
     public Movie() {
     }
 
-    public Movie(int id, String name, String slug, String description, EnumCategory[] category, LocalDate release, int view, int time) {
-        super(id, name, slug, description, category, release, view);
+    public Movie(int id, String name, String description, EnumCategory[] category, LocalDate release, int view, int time) {
+        super(id, name, description, category, release, view);
         this.time = time;
     }
 
@@ -21,5 +21,9 @@ public class Movie extends Similar{
         this.time = time;
     }
 
-
+    @Override
+    public String toString() {
+        return super.toString() +
+                "time=" + time ;
+    }
 }
