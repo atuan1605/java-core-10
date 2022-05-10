@@ -65,15 +65,12 @@ public class MovieService {
             return v1.getView()<v2.getView() ? 1:-1;
         });
         int count = 0;
-        for (int i = 0; i< listMovie.size(); i++){
-            count++;
-            if (count > 3){
-                break;
-            }else {
+        for (int i = 0; i< 3; i++){
                 System.out.println(listMovie.get(i));
-            }
         }
     }
+
+
     public ArrayList<Movie> getMovieByYear(ArrayList<Movie> listMovie){
         ArrayList<Movie> listYear = new ArrayList<>();
         listMovie.forEach((n) ->{
@@ -84,6 +81,29 @@ public class MovieService {
         return listYear;
     }
 
+    public ArrayList<Movie> getMovieByCategory2(ArrayList<Movie> list, EnumCategory[] category) {
+        ArrayList<Movie> arrList = new ArrayList<>();
+        list.forEach((n) -> {
+            boolean flag = true;
+            for (EnumCategory i : category) {
+                for (EnumCategory j : n.getCategory()) {
+                    if (i.equals(j)) {
+                        flag = true;
+                        break;
+                    } else {
+                        flag = false;
+                    }
+                }
+                if (flag == false) {
+                    break;
+                }
+            }
+            if (flag == true) {
+                arrList.add(n);
+            }
+        });
+        return arrList;
 
+    }
 
 }

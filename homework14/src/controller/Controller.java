@@ -1,5 +1,6 @@
 package controller;
 
+import model.EnumCategory;
 import model.Movie;
 import model.Serial;
 import service.MovieService;
@@ -45,6 +46,8 @@ public class Controller {
                     movieService.showAllMovieList(movieService.getMovieByYear(listMovie));
                     break;
                 case 7:
+                    EnumCategory[] enumCategory = new EnumCategory[]{EnumCategory.COMEDY,EnumCategory.FANTASY};
+                    movieService.showAllMovieList(movieService.getMovieByCategory2(listMovie,enumCategory));
                     break;
                 case 0:
                     flag = false;
@@ -52,7 +55,6 @@ public class Controller {
                 default:
                     System.out.println("please reselect!");
                     break;
-
             }
         }
     }
@@ -69,4 +71,5 @@ public class Controller {
         System.out.println("0. Exit");
         System.out.println("Select [0-7]");
     }
+
 }
