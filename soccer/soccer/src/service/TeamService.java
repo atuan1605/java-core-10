@@ -34,7 +34,9 @@ public class TeamService {
     }
 
     public void showAllPlayers(ArrayList<Team> list){
-        list.forEach(System.out::println);
+        for (Team p : list){
+            System.out.println(p);
+        }
     }
 
     public ArrayList<Team> buildTeam(ArrayList<Team> list, int df, int mf, int fw){
@@ -51,6 +53,7 @@ public class TeamService {
                 gkSize++;
             }
         }
+
         while (dfSize<df){
             int rdDF = rd.nextInt(20);
             if (list.get(rdDF).getPosition()==Position.DF){
@@ -60,6 +63,7 @@ public class TeamService {
                 }
             }
         }
+
         while (mfSize<mf){
             int rdMF = rd.nextInt(20);
             if (list.get(rdMF).getPosition()==Position.MF){
@@ -69,10 +73,11 @@ public class TeamService {
                 }
             }
         }
-        while (fwSize<mf){
+
+        while (fwSize<fw){
             int rdFW = rd.nextInt(20);
             if (list.get(rdFW).getPosition()==Position.FW){
-                if (!teamArrayList.contains(list.get(fwSize))){
+                if (!teamArrayList.contains(list.get(rdFW))){
                     teamArrayList.add(list.get(rdFW));
                     fwSize++;
                 }

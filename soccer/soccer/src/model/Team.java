@@ -40,6 +40,6 @@ public class Team {
 
     @Override
     public String toString() {
-        return number + fullName + position;
+        return number +" - " + fullName + " - "+ position;
     }
 }
